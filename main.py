@@ -1,16 +1,27 @@
-# This is a sample Python script.
+from functools import reduce
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+lst=[2,4,8,16]
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+print(list(map(lambda n:n**2,lst)))
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+fil=[1,2,4,5,6,7,8,9,10]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(list(filter(lambda n:n>5,fil)))
+
+red=[5,10,15,20,25]
+
+def cal(lis):
+    sum=0
+
+    for i in lis:
+        sum+=i
+
+    return sum
+
+print(cal(red))
+
+
+#print(list(reduce(lambda i,j:i+j,red)))
+
+print(reduce(lambda i,j:i+j,red))
