@@ -1,27 +1,15 @@
-from functools import reduce
-
-lst=[2,4,8,16]
-
-print(list(map(lambda n:n**2,lst)))
 
 
-fil=[1,2,4,5,6,7,8,9,10]
+list=[1,2,3,4,5]
 
-print(list(filter(lambda n:n>5,fil)))
+list_mod=[]
 
-red=[5,10,15,20,25]
+for i in list:
+    list_mod.append(i**2)
 
-def cal(lis):
-    sum=0
-
-    for i in lis:
-        sum+=i
-
-    return sum
-
-print(cal(red))
+print(list_mod)
 
 
-#print(list(reduce(lambda i,j:i+j,red)))
+print([i**2 for i in list])
 
-print(reduce(lambda i,j:i+j,red))
+print([i**2 for i in list if i > 3])
